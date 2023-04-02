@@ -13,3 +13,5 @@ jobs:
     - run: pip install coverage
     - run: python -m coverage run -m unittest main_test
     - run: python -m coverage report main.py
+    - run: pip install pylint
+    - run: pylint $(git ls-files '*.py')
