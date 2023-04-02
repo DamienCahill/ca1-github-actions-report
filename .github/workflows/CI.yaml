@@ -1,0 +1,11 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: pip install coverage
+    - run: python -m coverage run -m unittest main_test
