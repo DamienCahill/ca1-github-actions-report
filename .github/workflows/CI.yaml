@@ -12,3 +12,4 @@ jobs:
     - uses: actions/checkout@v3
     - run: pip install coverage
     - run: python -m coverage run -m unittest main_test
+    - run: python -m coverage report main.py
